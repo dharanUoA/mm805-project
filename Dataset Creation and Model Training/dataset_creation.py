@@ -76,8 +76,7 @@ def select_key(key):
 
 def logging_csv(number, landmark_list):
     if (0 <= number <= 9):
-        csv_path = 'model/keypoints.csv'
-        with open(csv_path, 'a', newline="") as f:
+        with open(CONSTANTS.KEYPOINTS_FILE_PATH, 'a', newline="") as f:
             writer = csv.writer(f)
             writer.writerow([number, *landmark_list])
     return

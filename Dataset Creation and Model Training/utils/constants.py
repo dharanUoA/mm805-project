@@ -10,6 +10,7 @@ MIN_DETECTION_CONFIDENCE = 0.7
 MAX_NUM_HANDS = 1
 
 LABELS_FILE_PATH = 'model/labels.csv'
+KEYPOINTS_FILE_PATH = 'model/keypoints.csv'
 
 def draw_landmarks(image, landmark_point):
     if len(landmark_point) > 0:
