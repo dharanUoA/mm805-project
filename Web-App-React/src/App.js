@@ -116,6 +116,7 @@ function App() {
           flexDirection: "column",
         }}
       >
+      <h1>Dynamic Vision</h1>
         <video
           style={{ display: "none" }}
           className="video"
