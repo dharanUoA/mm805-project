@@ -35,19 +35,17 @@ DynamicVision is a computer vision project that focuses on real-time gesture rec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## To run the demo on web app 
+## To run the demo on web app
 
-1. Execute below in command prompt or terminal 
+1. Execute below in command prompt or terminal
+
 ```sh
 cd "Web-App-React"
 npm i
 npm start
 ```
-2. Or use the below link
-```
-https://mm805-project.vercel.app/
-```
 
+2. Or use the link: [https://mm805-project.vercel.app/](https://mm805-project.vercel.app/)
 
 ### Built With
 
@@ -84,46 +82,59 @@ Download and install node js from [https://nodejs.org/en](https://nodejs.org/en)
 
 ### Dataset Creation
 
-Use file [dataset_creation.py](./Dataset%20Creation%20and%20Model%20Training/dataset_creation.py) for dataset creation.
+Use file [dataset_creation.py](./Dataset-Creation-and-Model-Training/dataset_creation.py) for dataset creation.
 
-- Current dataset labels: [labels.csv](./Dataset%20Creation%20and%20Model%20Training/model/labels.csv)
-- Current keypoints dataset: [keypoints.csv](./Dataset%20Creation%20and%20Model%20Training/model/keypoints.csv)
+- Current dataset labels: [labels.csv](./Dataset-Creation-and-Model-Training/model/labels.csv)
+- Current keypoints dataset: [keypoints.csv](./Dataset-Creation-and-Model-Training/model/keypoints.csv)
 
 Steps for new dataset creation:
-1. Create 2 new csv files, one for labels and second for keypoints file in [model](./Dataset%20Creation%20and%20Model%20Training//model/) directory.
+
+1. Create 2 new csv files, one for labels and second for keypoints file in [model](./Dataset-Creation-and-Model-Training/model/) directory.
 2. Add gesture names separated by new line in newly created labels file.
-3. Update the `LABELS_FILE_PATH` and `KEYPOINTS_FILE_PATH` file path in [constants.py](./Dataset%20Creation%20and%20Model%20Training//utils//constants.py).
+3. Update the `LABELS_FILE_PATH` and `KEYPOINTS_FILE_PATH` file path in [constants.py](./Dataset-Creation-and-Model-Training/utils/constants.py).
 4. pip install required python dependicies.
-5. Execute below in command prompt or terminal 
+5. Execute below in command prompt or terminal
+
 ```sh
 cd "Dataset-Creation-and-Model-Training"
 py dataset_creation.py
 ```
+
 5. A new python window will open, which will capture access the webcam and show the captured results. By raising your hands, you can check that the application will local the hand and finds 21 hand points and draws the results in the output as well.
 6. A new data row can be added by pressing the number keys.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Model Training
 
-Use file model_training.ipynb for model training.
+Use file [model_training.ipynb](./Dataset-Creation-and-Model-Training/model_training.ipynb) for model training.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Convert the Model to tensorflow js
 
-1. Use the below link for conversion.
-```
-https://colab.research.google.com/drive/1zR1DRhOpe4no_TyRHoKwprGUTtEre7j5?usp=sharing
-```
-2. After running the above notebook you will be getting two files bin and json. 
+1. Use the below colab link for conversion.
+   <br />
+   [colab.research.google.com](https://colab.research.google.com/drive/1zR1DRhOpe4no_TyRHoKwprGUTtEre7j5?usp=sharing)
+
+2. The above notebook will generate 2 new two files bin and json in hand-gesture-classifier of colab. Download those files.
 
 3. Put the above two files in one folder and place the folder in the below path of the web app project.
-```
-Web-App-React/public/model/{folder}
-```
+   <br />
+   [models](./Web-App-React/public/models/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Run the Web App
 
-Execute below in command prompt or terminal 
+1. Update the labels in `labels` and `labelsToDraw` variable of [App.js](./Web-App-React/src/App.js) at line no: `10`. Add all your labels in `labels` variable and add the labels for which you want to make changes in the view in `labelsToDraw` variable.
+2. Update the view update logic in `draw()` function of [App.js](./Web-App-React/src/App.js)
+3. Execute below in command prompt or terminal
+
 ```sh
 cd "Web-App-React"
 npm i
 npm start
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
