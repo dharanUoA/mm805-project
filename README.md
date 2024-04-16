@@ -35,6 +35,20 @@ DynamicVision is a computer vision project that focuses on real-time gesture rec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## To run the demo on web app 
+
+1. Execute below in command prompt or terminal 
+```sh
+cd "Web-App-React"
+npm i
+npm start
+```
+2. Or use the below link
+```
+https://mm805-project.vercel.app/
+```
+
+
 ### Built With
 
 #### Dataset creating and model training
@@ -80,10 +94,36 @@ Steps for new dataset creation:
 2. Add gesture names separated by new line in newly created labels file.
 3. Update the `LABELS_FILE_PATH` and `KEYPOINTS_FILE_PATH` file path in [constants.py](./Dataset%20Creation%20and%20Model%20Training//utils//constants.py).
 4. pip install required python dependicies.
-5. Execute below in cmmand prompt or terminal 
+5. Execute below in command prompt or terminal 
 ```sh
-cd "Dataset Creation and Model Training"
+cd "Dataset-Creation-and-Model-Training"
 py dataset_creation.py
 ```
 5. A new python window will open, which will capture access the webcam and show the captured results. By raising your hands, you can check that the application will local the hand and finds 21 hand points and draws the results in the output as well.
 6. A new data row can be added by pressing the number keys.
+
+### Model Training
+
+Use file model_training.ipynb for model training.
+
+### Convert the Model to tensorflow js
+
+1. Use the below link for conversion.
+```
+https://colab.research.google.com/drive/1zR1DRhOpe4no_TyRHoKwprGUTtEre7j5?usp=sharing
+```
+2. After running the above notebook you will be getting two files bin and json. 
+
+3. Put the above two files in one folder and place the folder in the below path of the web app project.
+```
+Web-App-React/public/model/{folder}
+```
+
+### Run the Web App
+
+Execute below in command prompt or terminal 
+```sh
+cd "Web-App-React"
+npm i
+npm start
+```
