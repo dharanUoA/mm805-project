@@ -51,7 +51,7 @@ body {
   font-size: 3rem;
   color: #e64833;
   margin-bottom: 20px;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 .video {
