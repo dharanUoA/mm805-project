@@ -4,8 +4,6 @@ import { useEffect, useRef } from "react";
 import { Hands } from "@mediapipe/hands";
 import { processLandmark } from "./handKeyPointsClassifier";
 
-const maxVideoWidth = 960;
-const maxVideoHeight = 540;
 const detectionInterval = 2.5 * 1000;
 const labels = ["Open", "Close", "Peace", "Thumbsup", "Ok"];
 const labelsToDraw = ["Peace", "Thumbsup", "Ok"];
@@ -17,6 +15,8 @@ function App() {
   const canvasEl = useRef(null);
   let startTime = new Date().getTime();
   let labelToDraw = "";
+  const maxVideoWidth = 960;
+  const maxVideoHeight = 540;
 
   useEffect(() => {
     camera.current = new Camera(videoElement.current, {
@@ -108,24 +108,22 @@ function App() {
 
   return (
     <div className="App">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-      <h1>Dynamic Vision</h1>
+      <div className="container">
+        <h1 className="title">Dynamic Vision</h1>
         <video
           style={{ display: "none" }}
           className="video"
           playsInline
           ref={videoElement}
         />
-        <canvas ref={canvasEl} width={maxVideoWidth} height={maxVideoHeight} />
+        <canvas
+          className="canvas"
+          ref={canvasEl}
+          width={maxVideoWidth}
+          height={maxVideoHeight}
+        />
       </div>
-    </div>
+      </div>
   );
 }
 

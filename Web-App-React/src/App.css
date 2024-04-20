@@ -1,5 +1,11 @@
+body {
+  background-color: #fbe9d0;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -34,5 +40,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: #e64833;
+  margin-bottom: 20px;
+  font-family: 'Poppins';
+}
+
+.video {
+  display: none;
+}
+
+.canvas {
+  border: 2px solid #333;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
   }
 }
