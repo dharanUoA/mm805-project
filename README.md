@@ -119,7 +119,7 @@ Use file [model_training.ipynb](./Dataset-Creation-and-Model-Training/model_trai
 
 2. The above notebook will generate 2 new two files bin and json in hand-gesture-classifier of colab. Download those files.
 
-3. Put the above two files in one folder and place the folder in the below path of the web app project.
+3. Place the above two files in one folder and place the folder in the below path of the web app project.
    <br />
    [models](./Web-App-React/public/models/)
 
